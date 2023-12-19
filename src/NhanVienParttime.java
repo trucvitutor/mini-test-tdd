@@ -31,7 +31,12 @@ public class NhanVienParttime extends NhanVien{
     @Override
     public String toString() {
         return "NhanVienParttime{" +
-                "time=" + time +
+                "maNhanVien='" + super.getMaNhanVien() + '\'' +
+                ", hoVaTen='" + super.getHoVaTen() + '\'' +
+                ", tuoi=" + super.getTuoi() +
+                ", numberPhone=" + super.getNumberPhone() +
+                ", email='" + super.getEmail() + '\'' +
+                ",time=" + time +
                 '}';
     }
 }
