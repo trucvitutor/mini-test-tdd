@@ -1,11 +1,11 @@
-public class NhanVien {
+public abstract class Employee {
     private String maNhanVien;
     private String hoVaTen;
     private int tuoi;
     private String numberPhone;
     private String email;
 
-    public NhanVien(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email) {
+    public Employee(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email) {
         this.maNhanVien = maNhanVien;
         this.hoVaTen = hoVaTen;
         this.tuoi = tuoi;
@@ -13,7 +13,7 @@ public class NhanVien {
         this.email = email;
     }
 
-    public NhanVien() {
+    public Employee() {
     }
 
     public String getMaNhanVien() {
@@ -55,6 +55,7 @@ public class NhanVien {
     public void setEmail(String email) {
         this.email = email;
     }
+    public abstract double getThucLinh();
 
     @Override
     public String toString() {

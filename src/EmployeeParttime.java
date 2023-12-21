@@ -1,19 +1,24 @@
-public class NhanVienParttime extends NhanVien{
+public class EmployeeParttime extends Employee {
     private int time;
 
-    public NhanVienParttime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email, int time) {
+    public EmployeeParttime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email, int time) {
         super(maNhanVien, hoVaTen, tuoi, numberPhone, email);
         this.time = time;
     }
 
-    public NhanVienParttime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email) {
+    public EmployeeParttime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email) {
         super(maNhanVien, hoVaTen, tuoi, numberPhone, email);
     }
 
-    public NhanVienParttime() {
+    public EmployeeParttime() {
     }
 
-    public NhanVienParttime(int time) {
+    @Override
+    public double getThucLinh() {
+        return this.time*100000;
+    }
+
+    public EmployeeParttime(int time) {
         this.time = time;
     }
 
@@ -24,9 +29,7 @@ public class NhanVienParttime extends NhanVien{
     public void setTime(int time) {
         this.time = time;
     }
-    public double thucLinh(){
-        return this.time*100000;
-    }
+
 
     @Override
     public String toString() {

@@ -1,18 +1,18 @@
-public class NhanVienFullTime extends NhanVien {
+public class EmployeeFullTime extends Employee {
     private double tienThuong;
     private double soTienPhat;
     private double luongCung;
 
-    public NhanVienFullTime() {
+    public EmployeeFullTime() {
     }
 
-    public NhanVienFullTime(double tienThuong, double soTienPhat, double luongCung) {
+    public EmployeeFullTime(double tienThuong, double soTienPhat, double luongCung) {
         this.tienThuong = tienThuong;
         this.soTienPhat = soTienPhat;
         this.luongCung = luongCung;
     }
 
-    public NhanVienFullTime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email,
+    public EmployeeFullTime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email,
                             double tienThuong, double soTienPhat, double luongCung) {
         super(maNhanVien, hoVaTen, tuoi, numberPhone, email);
         this.tienThuong = tienThuong;
@@ -20,7 +20,7 @@ public class NhanVienFullTime extends NhanVien {
         this.luongCung = luongCung;
     }
 
-    public NhanVienFullTime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email) {
+    public EmployeeFullTime(String maNhanVien, String hoVaTen, int tuoi, String numberPhone, String email) {
         super(maNhanVien, hoVaTen, tuoi, numberPhone, email);
     }
 
@@ -47,6 +47,7 @@ public class NhanVienFullTime extends NhanVien {
     public void setLuongCung(double luongCung) {
         this.luongCung = luongCung;
     }
+    @Override
     public double getThucLinh(){
         return this.luongCung+(this.tienThuong-this.soTienPhat);
     }
